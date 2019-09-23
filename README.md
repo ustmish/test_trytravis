@@ -10,3 +10,10 @@ User ustmish
 
 Host someinternalhost
 ProxyCommand ssh bastion nc 10.132.0.3 22
+
+
+
+testapp_IP = 35.195.136.64
+testapp_port = 9292
+
+
