@@ -1,6 +1,6 @@
 terraform {
   # Версия terraform
-  required_version = "0.12.9"
+  required_version = "0.12.8"
 }
 
 provider "google" {
@@ -24,7 +24,7 @@ resource "google_compute_instance" "app" {
   metadata = {
     # путь до публичного ключа
     #ssh-keys = "ustmish:${file("~/.ssh/id_rsa.pub")}"
-    ssh-keys = "ustmish:${file(var.public_key_path)}"
+    ssh-keys = "ustmish:${file(var.public_key_path)} ustmish1:${file(var.public_key_path)}"
   }
 
   boot_disk {
