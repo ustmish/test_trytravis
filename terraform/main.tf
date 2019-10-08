@@ -1,6 +1,6 @@
 terraform {
   # Версия terraform
-  required_version = "0.12.8"
+  required_version = "0.12.9"
 }
 
 provider "google" {
@@ -12,7 +12,7 @@ provider "google" {
 
   #region = "europe-west-1"
   region      = var.region
- # credentials = "/root/.config/gcloud/legacy_credentials/vy.mishukov@gmail.com/adc.json"
+  credentials = "/root/.config/gcloud/legacy_credentials/vy.mishukov@gmail.com/adc.json"
 }
 
 resource "google_compute_instance" "app" {
