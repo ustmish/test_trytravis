@@ -20,6 +20,9 @@ module "app" {
   public_key_path = var.public_key_path
   zone            = var.zone
   app_disk_image  = var.app_disk_image
+  app_name = var.app_name
+  ip_name = var.ip_name
+  firewall_puma_name = var.firewall_puma_name
 }
 
 module "db" {
@@ -27,8 +30,11 @@ module "db" {
   public_key_path = var.public_key_path
   zone            = var.zone
   db_disk_image   = var.db_disk_image
+  instance_db_name = var.instance_db_name
+  firewall_mongo_name = var.firewall_mongo_name
 }
 module "vpc" {
   source          = "../modules/vpc"
   source_ranges = ["109.252.70.61/32"]
+  ssh_name = var.ssh_name
 }

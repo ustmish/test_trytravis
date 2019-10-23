@@ -4,12 +4,12 @@ variable project {
 variable region {
   description = "Region"
   # Значение по умолчанию
-  default = "europe-west1"
+  default = "europe-west2"
 }
 
 variable zone {
   description = "Region Instance"
-  default     = "europe-west1-b"
+  default     = "europe-west2-b"
 }
 
 variable public_key_path {
@@ -35,4 +35,24 @@ variable db_disk_image {
   default = "reddit-db-base"
 }
 
+variable app_name{
+  description = "application name"
+  default = "reddit-app"
+}
+variable ip_name{
+  description = "name of ip resource"
+}
+variable firewall_puma_name{
+  description = "firewall puma name"
+}
+
+variable instance_db_name{
+  description = "name of instance"
+}
+variable firewall_mongo_name{
+  description = "firewall_mongo_name"
+}
+variable ssh_name{
+  description = "firewall name for ssh access"
+}
 

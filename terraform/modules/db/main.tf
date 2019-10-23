@@ -1,5 +1,5 @@
 resource "google_compute_instance" "db" {
-  name = "reddit-db"
+  name = var.instance_db_name
   machine_type = "g1-small"
   zone = var.zone
     tags = ["reddit-db"]
@@ -17,7 +17,7 @@ resource "google_compute_instance" "db" {
   }
  }
 resource "google_compute_firewall" "firewall_mongo" {
-  name = "allow-mongo-default"
+  name = var.firewall_mongo_name
   network = "default"
   allow {
     protocol = "tcp"
