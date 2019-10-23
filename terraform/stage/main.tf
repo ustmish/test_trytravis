@@ -12,7 +12,7 @@ provider "google" {
 
   #region = "europe-west-2"
   region      = var.region
-  credentials = "/root/.config/gcloud/legacy_credentials/vy.mishukov@gmail.com/adc.json"
+ # credentials = "/root/.config/gcloud/legacy_credentials/vy.mishukov@gmail.com/adc.json"
 }
 
 module "app" {
