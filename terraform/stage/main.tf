@@ -1,6 +1,5 @@
 terraform {
-  # Версия terraform
-  required_version = "0.12.8"
+  required_version = "0.12.9"
 }
 
 provider "google" {
@@ -12,7 +11,7 @@ provider "google" {
 
   #region = "europe-west-2"
   region      = var.region
- # credentials = "/root/.config/gcloud/legacy_credentials/vy.mishukov@gmail.com/adc.json"
+  credentials = "/root/.config/gcloud/legacy_credentials/vy.mishukov@gmail.com/adc.json"
 }
 
 module "app" {
@@ -35,6 +34,6 @@ module "db" {
 }
 module "vpc" {
   source          = "../modules/vpc"
-  source_ranges = ["109.252.70.61/32"]
+  source_ranges = ["0.0.0.0/32"]
   ssh_name = var.ssh_name
 }
