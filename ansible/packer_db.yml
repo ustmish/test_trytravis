@@ -6,8 +6,8 @@
   # Добавим ключ репозитория для последующей работы с ним
   - name: Add APT key
     apt_key:
-      id: EA312927
-      keyserver: keyserver.ubuntu.com
+      id: D68FA50FEA312927
+      keyserver: hkp://keyserver.ubuntu.com:80
 
   # Подключаем репозиторий с пакетами mongodb
   - name: Add APT repository
@@ -19,7 +19,7 @@
   - name: Install mongodb package
     apt:
       name: mongodb-org
-      force_apt_get: yes
+      #    force_apt_get: yes
       state: present
 
   # Включаем сервис
