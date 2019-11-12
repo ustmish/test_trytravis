@@ -14,12 +14,17 @@ sudo unzip -d /usr/bin /tmp/packer_1.4.5_linux_amd64.zip
 echo checking install packer
 packer --version
 
+echo install ansible
+sudo pip install --upgrade pip
+sudo pip install --user ansible
+echo ansible check version
+ansible --version
 
 echo install ansible-lint
-sudo pip install --upgrade pip
 sudo pip install --user ansible-lint
-echo ansible-lint check version
+echo ansible-link check version
 ansible-lint --version
+
 
 echo install tflint
 sudo curl -L "$(curl -s https://api.github.com/repos/terraform-linters/tflint/releases/latest | grep -o -E "https://.+?_linux_amd64.zip")" > tflint.zip && unzip -d /usr/bin tflint.zip && rm tflint.zip
