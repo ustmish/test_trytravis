@@ -24,6 +24,12 @@ ls -l /usr/bin | grep terra
 #packer validate -var-file=./variables.json app.json
 #packer validate -var-file=./variables.json db.json
 $repo=`pwd`
+
+echo test1
+pwd
+ls -l
+echo test2
+
 $envprod=$repo/terraform/prod
 echo $envprod
 echo terraform checking123
