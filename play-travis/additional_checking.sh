@@ -4,6 +4,7 @@ curl https://releases.hashicorp.com/terraform/0.12.13/terraform_0.12.13_linux_am
 echo unzip terraform:
 unzip -d /usr/bin /tmp/terraform_0.12.13_linux_amd64.zip
 
+ls -l /usr/bin | grep terra
 #echo Download packer
 #curl https://releases.hashicorp.com/packer/1.4.5/packer_1.4.5_linux_amd64.zip -o /tmp/packer_1.4.5_linux_amd64.zip
 
@@ -23,16 +24,17 @@ unzip -d /usr/bin /tmp/terraform_0.12.13_linux_amd64.zip
 #packer validate -var-file=./variables.json app.json
 #packer validate -var-file=./variables.json db.json
 $repo=`pwd`
-
+$envprod=$repo/terraform/prod
+echo $envprod
 echo terraform checking123
-pwd
-cd $repo/terraform/prod
-pwd
+
+cd $envprod
+
 terraform validate
 
-cd $repo/terraform/stage
-pwd
-terraform validate
+#cd $repo/terraform/stage
+#pwd
+#terraform validate
 
 #tflint
 
