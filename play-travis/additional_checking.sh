@@ -38,6 +38,10 @@ cd $envprod
 
 terraform validate
 
+
+
+
+
 #cd $repo/terraform/stage
 #pwd
 #terraform validate
