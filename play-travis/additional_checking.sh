@@ -13,7 +13,7 @@ curl https://releases.hashicorp.com/packer/1.4.5/packer_1.4.5_linux_amd64.zip -o
 unzip -d /usr/bin /tmp/packer_1.4.5_linux_amd64.zip
 
 echo install ansible-lint
-sudo pip install ansible-lint
+sudo pip install --user ansible-lint
 echo ansible-lint
 ansible-lint
 
