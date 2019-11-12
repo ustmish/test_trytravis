@@ -2,7 +2,7 @@
 echo Download terraform:
 curl https://releases.hashicorp.com/terraform/0.12.13/terraform_0.12.13_linux_amd64.zip -o /tmp/terraform_0.12.13_linux_amd64.zip
 echo unzip terraform:
-unzip -d /usr/bin /tmp/terraform_0.12.13_linux_amd64.zip
+sudo unzip -d /usr/bin /tmp/terraform_0.12.13_linux_amd64.zip
 
 ls -l /usr/bin | grep terra
 #echo Download packer
