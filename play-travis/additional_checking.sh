@@ -25,8 +25,10 @@
 
 echo terraform checking123
 pwd
-#cd terraform
+cd terraform
+pwd
 terraform validate
+
 #tflint
 
 #echo anible-lint checking
