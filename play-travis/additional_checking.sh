@@ -13,7 +13,9 @@ curl https://releases.hashicorp.com/packer/1.4.5/packer_1.4.5_linux_amd64.zip -o
 unzip -d /usr/bin /tmp/packer_1.4.5_linux_amd64.zip
 
 echo install ansible-lint
-pip install ansible-lint
+sudo pip install ansible-lint
+echo ansible-lint
+ansible-lint
 
 echo install tflint
 sudo curl -L "$(curl -s https://api.github.com/repos/terraform-linters/tflint/releases/latest | grep -o -E "https://.+?_linux_amd64.zip")" > tflint.zip && unzip -d /usr/bin tflint.zip && rm tflint.zip
@@ -54,15 +56,15 @@ terraform init -backend=false
 terraform validate
 tflint
 
-echo checking ansible
-cd $playbook
-ansible-lint *
+#echo checking ansible
+#cd $playbook
+#ansible-lint *
 
-echo checking packer
-cd $packerdir
+#echo checking packer
+#cd $packerdir
 
-packer validate -var-file=./variables.json app.json
-packer validate -var-file=./variables.json db.json
+#packer validate -var-file=./variables.json app.json
+#packer validate -var-file=./variables.json db.json
 
 
 
