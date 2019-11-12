@@ -23,7 +23,7 @@ ls -l /usr/bin | grep terra
 #cd packer
 #packer validate -var-file=./variables.json app.json
 #packer validate -var-file=./variables.json db.json
-$repo=`pwd`
+repo=`pwd`
 
 echo test1
 pwd
