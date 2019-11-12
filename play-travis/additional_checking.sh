@@ -35,7 +35,7 @@ echo $envprod
 echo terraform checking123
 
 cd $envprod
-
+terraform init
 terraform validate
 
 
