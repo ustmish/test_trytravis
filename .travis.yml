@@ -1,8 +1,7 @@
 dist: trusty
 sudo: required
 language: bash
-before_install: curl https://raw.githubusercontent.com/express42/otus-homeworks/2019-08/run.sh
-  | bash && sh play-travis/additional_checking.sh 
+before_install: sh play-travis/additional_checking.sh 
 notifications:
   slack:
     rooms:
