@@ -15,13 +15,13 @@ echo checking install packer
 packer --version
 
 echo install ansible
-sudo pip install --upgrade pip
-sudo pip install --user ansible
+pip install --upgrade pip
+pip install --user ansible
 echo ansible check version
 ansible --version
 
 echo install ansible-lint
-sudo pip install --user ansible-lint
+pip install --user ansible-lint
 echo ansible-link check version
 ansible-lint --version
 
