@@ -36,7 +36,7 @@ echo terraform checking123
 
 cd $envprod
 terraform get
-terraform init
+terraform init -backend=false
 terraform validate
 
 
