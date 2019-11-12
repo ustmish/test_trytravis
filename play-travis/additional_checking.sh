@@ -27,20 +27,14 @@ ansible-lint --version
 
 
 echo install tflint
-sudo curl -L "$(curl -s https://api.github.com/repos/terraform-linters/tflint/releases/latest | grep -o -E "https://.+?_linux_amd64.zip")" > tflint.zip && unzip -d /usr/bin tflint.zip && rm tflint.zip
+sudo curl -L "$(curl -s https://api.github.com/repos/terraform-linters/tflint/releases/latest | grep -o -E "https://.+?_linux_amd64.zip")" >  tflint.zip && sudo unzip -d /usr/bin tflint.zip && rm tflint.zip
 
-#cp tflint /usr/bin
+echo tflint check version
 
-#echo packer checking
-#cd packer
-#packer validate -var-file=./variables.json app.json
-#packer validate -var-file=./variables.json db.json
+tflint --version
+
 repo=`pwd`
 
-#echo test1
-#pwd
-#ls -l
-#echo test2
 
 envprod=$repo/terraform/prod
 envstage=$repo/terraform/stage
@@ -65,15 +59,15 @@ terraform init -backend=false
 terraform validate
 tflint
 
-#echo checking ansible
-#cd $playbook
-#ansible-lint *
+echo checking ansible
+cd $playbook
+ansible-lint *
 
-#echo checking packer
-#cd $packerdir
+echo checking packer
+cd $packerdir
 
-#packer validate -var-file=./variables.json app.json
-#packer validate -var-file=./variables.json db.json
+packer validate -var-file=./variables.json app.json
+packer validate -var-file=./variables.json db.json
 
 
 
