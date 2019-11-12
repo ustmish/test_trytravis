@@ -30,7 +30,7 @@ pwd
 ls -l
 echo test2
 
-$envprod=$repo/terraform/prod
+envprod=$repo/terraform/prod
 echo $envprod
 echo terraform checking123
 
