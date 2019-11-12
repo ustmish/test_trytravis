@@ -3,8 +3,8 @@
 #echo unzip terraform:
 #unzip /tmp/terraform_0.12.13_linux_amd64.zip -d /usr/bin
 
-echo Download packer
-curl https://releases.hashicorp.com/packer/1.4.5/packer_1.4.5_linux_amd64.zip -o /tmp/packer_1.4.5_linux_amd64.zip
+#echo Download packer
+#curl https://releases.hashicorp.com/packer/1.4.5/packer_1.4.5_linux_amd64.zip -o /tmp/packer_1.4.5_linux_amd64.zip
 
 #echo unzip packer
 #unzip /tmp/packer_1.4.5_linux_amd64.zip -d /usr/bin
@@ -22,9 +22,9 @@ curl https://releases.hashicorp.com/packer/1.4.5/packer_1.4.5_linux_amd64.zip -o
 #packer validate -var-file=./variables.json app.json
 #packer validate -var-file=./variables.json db.json
 
-#echo terraform checking
-#cd ../terraform
-#terraform validate
+echo terraform checking123
+cd terraform
+terraform validate
 #tflint
 
 #echo anible-lint checking
